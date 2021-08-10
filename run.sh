@@ -4,9 +4,9 @@ export MID_DATA_DIR="./data/mid_data"
 export RAW_DATA_DIR="./data/raw_data"
 export OUTPUT_DIR="./out"
 
-export GPU_IDS="0"
-export BERT_TYPE="roberta_wwm"  # roberta_wwm / roberta_wwm_large / uer_large
-export BERT_DIR="../bert/torch_$BERT_TYPE"
+export GPU_IDS="0,1"
+export BERT_TYPE="roberta_wwm_large"  # roberta_wwm / roberta_wwm_large / uer_large
+export BERT_DIR="bert/chinese-roberta-wwm-ext-large"
 
 export MODE="train"
 export TASK_TYPE="crf"
@@ -25,7 +25,7 @@ python main.py \
 --attack_train="" \
 --train_batch_size=24 \
 --dropout_prob=0.1 \
---max_seq_len=512 \
+--max_seq_len=150 \
 --lr=2e-5 \
 --other_lr=2e-3 \
 --seed=123 \
